@@ -1,15 +1,16 @@
 # import dracula.draw
-
+from theme import tampilan
+tampilan(c)
 # Load existing settings made via :set
 config.load_autoconfig()
 
-dracula.draw.blood(c, {
-    'spacing': {
-        'vertical': 1,
-        'horizontal': 2
-    }
-})
-
+# dracula.draw.blood(c, {
+#     'spacing': {
+#         'vertical': 1,
+#         'horizontal': 2
+#     }
+# })
+#
 c.aliases = {
     'q': 'close',
     'qa': 'quit',
@@ -90,6 +91,7 @@ c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
 c.url.searchengines['g'] = 'http://www.google.com/search?hl=en&source=hp&ie=ISO-8859-l&q={}'
 c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['gh'] = 'https://github.com/search?q={}'
+c.url.searchengines['red'] = 'https://libredd.it/r/popular/search?q={}&restrict_sr=on'
 
 
 
