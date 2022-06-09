@@ -78,7 +78,7 @@ c.url.start_pages = 'https://google.com'
 
 ## Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'
-c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = False
 c.colors.webpage.darkmode.policy.images = 'never'
 
 
