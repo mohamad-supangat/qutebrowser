@@ -60,7 +60,7 @@ c.editor.command = ['alacritty', '-e', 'nvim', '{file}']
 c.fileselect.single_file.command = ['alacritty', '-e', 'ranger', '--choosefile={}']
 c.fileselect.multiple_files.command = ['alacritty', '-e', 'ranger', '--choosefiles={}']
 c.fileselect.folder.command = ['alacritty', '-e', 'ranger', '--choosedir={}']
-c.input.insert_mode.auto_load = True
+c.input.insert_mode.auto_load = False
 c.scrolling.smooth = True
 
 
