@@ -33,11 +33,20 @@ c.content.blocking.method = 'hosts'
 
 c.content.blocking.hosts.lists = [
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
-    'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428',
+    # 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext&_=223428',
     'https://adaway.org/hosts.txt',
-    'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
+    # 'https://raw.githubusercontent.com/StevenBlack/hosts/master/alternates/fakenews-gambling-porn-social/hosts',
 ]
-c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt', 'https://easylist.to/easylist/easyprivacy.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt', 'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt', 'https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt']
+c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt',
+                                    'https://easylist.to/easylist/easyprivacy.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters-2021.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/legacy.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt',
+                                    'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt',
+                                    'https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt']
 
 # download manager
 c.downloads.position = 'bottom'
@@ -74,16 +83,16 @@ c.tabs.position = 'top'
 c.tabs.show = 'multiple'
 
 
-c.url.start_pages = 'https://google.com'
+c.url.start_pages = str('~/.config/qutebrowser/startpage/index.html')
 
 ## Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'
-c.colors.webpage.darkmode.enabled = False
+c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
 
 
 c.fonts.default_family = 'Iosevka'
-c.url.default_page = "https://google.com"
+c.url.default_page = c.url.start_pages
 
 ## Search Enginge
 c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
@@ -92,7 +101,7 @@ c.url.searchengines['g'] = 'http://www.google.com/search?hl=en&source=hp&ie=ISO-
 c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['gh'] = 'https://github.com/search?q={}'
 c.url.searchengines['red'] = 'https://libredd.it/r/popular/search?q={}&restrict_sr=on'
-
+c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
 
 
 # Spawn with URL
