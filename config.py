@@ -87,7 +87,7 @@ c.url.start_pages = str('~/.config/qutebrowser/startpage/index.html')
 
 ## Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'
-c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
 
 
