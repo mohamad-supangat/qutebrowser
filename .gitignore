@@ -1,3 +1,5 @@
 
 qsettings/QtProject.conf
 **/*.pyc
+
+autoconfig.yml

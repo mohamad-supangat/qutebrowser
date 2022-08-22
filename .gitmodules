@@ -1,3 +1,6 @@
 [submodule "startpage"]
 	path = startpage
 	url = https://github.com/b-coimbra/dawn.git
+[submodule "StartTreeV2"]
+	path = StartTreeV2
+	url = https://github.com/AlexW00/StartTreeV2

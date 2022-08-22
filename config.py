@@ -52,7 +52,7 @@ c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt',
 c.downloads.position = 'bottom'
 c.downloads.location.remember = False
 c.downloads.location.suggestion = "both"
-c.downloads.remove_finished = 5000
+c.downloads.remove_finished = 30000
 
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {upstream_browser_key}/{upstream_browser_version} Safari/{webkit_version}', 'https://web.whatsapp.com/')
 config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:90.0) Gecko/20100101 Firefox/90.0', 'https://accounts.google.com/*')
@@ -81,9 +81,13 @@ c.tabs.background = True
 c.tabs.last_close = 'ignore'
 c.tabs.position = 'top'
 c.tabs.show = 'multiple'
+c.tabs.favicons.scale = 0.8
+c.tabs.indicator.width = 10
 
 
-c.url.start_pages = str('~/.config/qutebrowser/startpage/index.html')
+
+
+c.url.start_pages = str('~/.config/qutebrowser/StartTreeV2/index.html')
 
 ## Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'

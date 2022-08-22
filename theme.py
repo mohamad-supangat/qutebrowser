@@ -189,7 +189,7 @@ def tampilan(c):
     c.colors.statusbar.private.fg = palette['foreground-alt']
 
     # Background color of the progress bar.
-    c.colors.statusbar.progress.bg = palette['background']
+    c.colors.statusbar.progress.bg = palette['red']
 
     # Foreground color of the URL in the statusbar on error.
     c.colors.statusbar.url.error.fg = palette['red']
