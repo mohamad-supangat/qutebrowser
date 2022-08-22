@@ -87,7 +87,7 @@ c.tabs.indicator.width = 10
 
 
 
-c.url.start_pages = str('~/.config/qutebrowser/StartTreeV2/index.html')
+c.url.start_pages = str('~/.config/qutebrowser/startpage/index.html')
 
 ## Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'

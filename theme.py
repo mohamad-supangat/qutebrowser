@@ -12,6 +12,7 @@ def tampilan(c):
         'green': '#B1E3AD',
         'peach': '#F7BE95',
         'sky': '#92D2E8',
+        'lavender': '#b4befe',
         'red': '#E38C8F',
         'yellow': '#EBDDAA'
     }
@@ -81,7 +82,7 @@ def tampilan(c):
 
     # Background color for hints. Note that you can use a `rgba(...)` value
     # for transparency.
-    c.colors.hints.bg = palette['sky']
+    c.colors.hints.bg = palette['lavender']
 
     # Font color for hints.
     c.colors.hints.fg = palette['background']
@@ -96,7 +97,7 @@ def tampilan(c):
     c.colors.keyhint.bg = palette['background']
 
     # Text color for the keyhint widget.
-    c.colors.keyhint.fg = palette['sky']
+    c.colors.keyhint.fg = palette['lavender']
 
     # Highlight color for keys to complete the current keychain.
     c.colors.keyhint.suffix.fg = palette['selection']
@@ -165,7 +166,7 @@ def tampilan(c):
     c.colors.statusbar.command.private.fg = palette['foreground-alt']
 
     # Background color of the statusbar in insert mode.
-    c.colors.statusbar.insert.bg = palette['sky']
+    c.colors.statusbar.insert.bg = palette['lavender']
 
     # Foreground color of the statusbar in insert mode.
     c.colors.statusbar.insert.fg = palette['background']
@@ -252,16 +253,16 @@ def tampilan(c):
 
     # ## Background color of selected even tabs.
     # ## Type: QtColor
-    c.colors.tabs.selected.even.bg = palette['background']
+    c.colors.tabs.selected.even.bg = palette['lavender']
 
     # ## Foreground color of selected even tabs.
     # ## Type: QtColor
-    c.colors.tabs.selected.even.fg = palette['yellow']
+    c.colors.tabs.selected.even.fg = palette['background']
 
     # ## Background color of selected odd tabs.
     # ## Type: QtColor
-    c.colors.tabs.selected.odd.bg = palette['background']
+    c.colors.tabs.selected.odd.bg = palette['lavender']
 
     # ## Foreground color of selected odd tabs.
     # ## Type: QtColor
-    c.colors.tabs.selected.odd.fg = palette['yellow']
+    c.colors.tabs.selected.odd.fg = palette['background']

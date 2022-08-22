@@ -6,19 +6,7 @@
 
 config_version: 2
 settings:
-  colors.statusbar.progress.bg:
-    global: '#1E1E2E'
-  fonts.default_family:
-    global: Iosevka
-  statusbar.widgets:
-    global:
-    - progress
-    - keypress
-    - url
-    - scroll
-    - history
-    - tabs
-  tabs.background:
-    global: false
-  tabs.favicons.scale:
-    global: 1.0
+  fonts.completion.category:
+    global: bold default_size default_family
+  fonts.tabs.selected:
+    global: default_size default_family
