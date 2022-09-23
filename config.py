@@ -11,14 +11,7 @@ config.load_autoconfig()
 #     }
 # })
 #
-c.aliases = {
-    'q': 'close',
-    'qa': 'quit',
-    'w': 'session-save',
-    'wq': 'quit --save',
-    'wqa': 'quit --save',
-    'bitwarden': 'spawn --userscript qute-bitwarden'
-}
+
 
 c.auto_save.session = True
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
@@ -109,5 +102,23 @@ c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
 # Spawn with URL
 config.bind('x', 'spawn l -u {url}')
 config.bind('X', 'hint links spawn -u {hint-url}')
+config.bind('C','spawn --userscript container-open')
+config.bind('<Alt-c>','set-cmd-text -s :spawn --userscript container-open')
+config.bind('<Alt-f>','hint links userscript container-open')
+config.bind('<Alt-f>','hint links userscript container-open')
 
+
+## alias
+c.aliases = {
+    'q': 'close',
+    'qa': 'quit',
+    'w': 'session-save',
+    'wq': 'quit --save',
+    'wqa': 'quit --save',
+    'bitwarden': 'spawn --userscript qute-bitwarden'
+}
+c.aliases['container-open'] = 'spawn --userscript container-open'
+c.aliases['container-ls'] = 'spawn --userscript container-ls'
+c.aliases['container-add'] = 'spawn --userscript container-add'
+c.aliases['container-rm'] = 'spawn --userscript container-rm'
 
