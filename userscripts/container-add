@@ -6,7 +6,7 @@ set -e
 . $(dirname $0)/containers_config
 
 # If container name is not passed, signal an error
-if [ $# -eq 0 ] 
+if [ $# -eq 0 ]
 then
 	send_msg "error" "Usage: container-add <container-name>"
 	exit 1
@@ -26,4 +26,9 @@ echo "$CONTAINER_NAME" >> $CONTAINER_LIST
 # Create base dir
 BASE_DIR="$CONTAINER_BASE/$CONTAINER_NAME"
 mkdir -p "$BASE_DIR"
+
+mkdir $BASE_DIR/config
+ln -s $HOME/.config/qutebrowser/userscripts $BASE_DIR/config/
+ln -s $HOME/.config/qutebrowser/greasemonkey $BASE_DIR/config/
+
 send_msg "info" "Container added"
