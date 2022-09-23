@@ -3,3 +3,4 @@ qsettings/QtProject.conf
 **/*.pyc
 
 autoconfig.yml
+containers
