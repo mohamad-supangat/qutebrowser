@@ -17,6 +17,6 @@ for (var i = 0; i < links.snapshotLength; i++) {
 
   thisLink.href = thisLink.href.replace(
     "https://www.reddit.com/",
-    "https://libredd.it/"
+    "https://libreddit.spike.codes/"
   );
 }
