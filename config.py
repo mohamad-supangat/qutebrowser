@@ -14,7 +14,9 @@ config.load_autoconfig()
 
 
 c.auto_save.session = True
-
+c.session.lazy_restore = True
+c.completion.shrink = True
+c.completion.use_best_match = True
 c.content.geolocation = False
 c.content.autoplay  = False
 
@@ -22,7 +24,8 @@ c.content.autoplay  = False
 # adblock
 c.content.blocking.enabled  = True
 c.content.blocking.hosts.block_subdomains = True
-c.content.blocking.method = 'hosts'
+c.content.blocking.method = 'both'
+c.content.tls.certificate_errors = 'block'
 
 c.content.blocking.hosts.lists = [
     'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts',
