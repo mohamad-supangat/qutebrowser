@@ -14,7 +14,7 @@ config.load_autoconfig()
 
 
 c.auto_save.session = True
-config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
+
 c.content.geolocation = False
 c.content.autoplay  = False
 
@@ -50,7 +50,9 @@ c.downloads.remove_finished = 30000
 config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36', 'global')
 
 config.set('content.images', True, 'chrome-devtools://*')
+config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.images', True, 'devtools://*')
+
 
 
 c.content.pdfjs = True
@@ -106,7 +108,7 @@ config.bind('C','spawn --userscript container-open')
 config.bind('<Alt-c>','set-cmd-text -s :spawn --userscript container-open')
 config.bind('<Alt-f>','hint links userscript container-open')
 config.bind('<Alt-f>','hint links userscript container-open')
-
+config.bind('X', 'spawn --userscript add-nextcloud-bookmarks')
 
 ## alias
 c.aliases = {
@@ -121,4 +123,6 @@ c.aliases['container-open'] = 'spawn --userscript container-open'
 c.aliases['container-ls'] = 'spawn --userscript container-ls'
 c.aliases['container-add'] = 'spawn --userscript container-add'
 c.aliases['container-rm'] = 'spawn --userscript container-rm'
+c.aliases['nextcloud-bookmarks-import'] = 'spawn --userscript import-nextcloud-bookmarks'
+
 
