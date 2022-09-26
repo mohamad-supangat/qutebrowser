@@ -102,6 +102,9 @@ c.url.searchengines['y'] = 'https://www.youtube.com/results?search_query={}'
 c.url.searchengines['gh'] = 'https://github.com/search?q={}'
 c.url.searchengines['red'] = 'https://libredd.it/r/popular/search?q={}&restrict_sr=on'
 c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
+c.url.searchengines['d'] = 'https://duckduckgo.com/?q={}&hps=1'
+
+
 
 
 # Spawn with URL
