@@ -266,3 +266,5 @@ def tampilan(c):
     # ## Foreground color of selected odd tabs.
     # ## Type: QtColor
     c.colors.tabs.selected.odd.fg = palette['background']
+
+    c.colors.webpage.bg = palette['background']
