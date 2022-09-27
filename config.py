@@ -108,13 +108,13 @@ c.url.searchengines['d'] = 'https://duckduckgo.com/?q={}&hps=1'
 
 
 # Spawn with URL
-config.bind('x', 'spawn l -u {url}')
-config.bind('X', 'hint links spawn -u {hint-url}')
 config.bind('C','spawn --userscript container-open')
 config.bind('<Alt-c>','set-cmd-text -s :spawn --userscript container-open')
 config.bind('<Alt-f>','hint links userscript container-open')
-config.bind('<Alt-f>','hint links userscript container-open')
+config.bind('<Alt-b>','spawn --userscript qute-bitwarden')
 config.bind('X', 'spawn --userscript add-nextcloud-bookmarks')
+config.bind(',dark', 'spawn --userscript dark-toogle')
+
 
 ## alias
 c.aliases = {
