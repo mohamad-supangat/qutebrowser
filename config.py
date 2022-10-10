@@ -17,12 +17,14 @@ c.auto_save.session = True
 c.session.lazy_restore = True
 c.completion.shrink = True
 c.completion.use_best_match = True
+c.content.notifications.presenter = 'messages'
+c.content.fullscreen.window = True
 c.content.geolocation = False
-c.content.autoplay  = False
+c.content.autoplay = False
 
 
 # adblock
-c.content.blocking.enabled  = True
+c.content.blocking.enabled = True
 c.content.blocking.hosts.block_subdomains = True
 c.content.blocking.method = 'both'
 c.content.tls.certificate_errors = 'block'
@@ -49,21 +51,27 @@ c.downloads.position = 'bottom'
 c.downloads.location.remember = False
 c.downloads.location.suggestion = "both"
 c.downloads.remove_finished = 30000
+old_chrome_ua = 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/67.0.1 Safari/{webkit_version}'
 
-config.set('content.headers.user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36', 'global')
+latest_chrome_ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36'
+# config.set('content.headers.user_agent', old_chrome_ua, 'steamdb.info')
+# config.set('content.headers.user_agent', old_chrome_ua, 'www.nginx.com')
+# config.set('content.headers.user_agent', old_chrome_ua, 'gitlab.com/users/sign_in')
+config.set('content.headers.user_agent', old_chrome_ua, 'global')
 
 config.set('content.images', True, 'chrome-devtools://*')
 config.set('content.cookies.accept', 'all', 'chrome-devtools://*')
 config.set('content.images', True, 'devtools://*')
 
 
-
 c.content.pdfjs = True
 
 
 c.editor.command = ['alacritty', '-e', 'nvim', '{file}']
-c.fileselect.single_file.command = ['alacritty', '-e', 'ranger', '--choosefile={}']
-c.fileselect.multiple_files.command = ['alacritty', '-e', 'ranger', '--choosefiles={}']
+c.fileselect.single_file.command = [
+    'alacritty', '-e', 'ranger', '--choosefile={}']
+c.fileselect.multiple_files.command = [
+    'alacritty', '-e', 'ranger', '--choosefiles={}']
 c.fileselect.folder.command = ['alacritty', '-e', 'ranger', '--choosedir={}']
 c.input.insert_mode.auto_load = False
 c.scrolling.smooth = True
@@ -71,7 +79,8 @@ c.scrolling.smooth = True
 
 c.statusbar.show = 'always'
 c.statusbar.position = 'bottom'
-c.statusbar.widgets = ['progress', 'keypress', 'url', 'scroll', 'history', 'tabs']
+c.statusbar.widgets = ['progress', 'keypress',
+                       'url', 'scroll', 'history', 'tabs']
 c.tabs.favicons.show = 'always'
 c.tabs.background = True
 c.tabs.last_close = 'ignore'
@@ -81,11 +90,9 @@ c.tabs.favicons.scale = 0.8
 c.tabs.indicator.width = 10
 
 
-
-
 c.url.start_pages = str('~/.config/qutebrowser/startpage/index.html')
 
-## Dark Mode
+# Dark Mode
 c.colors.webpage.preferred_color_scheme = 'dark'
 # c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = 'never'
@@ -94,7 +101,7 @@ c.colors.webpage.darkmode.policy.images = 'never'
 c.fonts.default_family = 'Iosevka'
 c.url.default_page = c.url.start_pages
 
-## Search Enginge
+# Search Enginge
 c.url.searchengines = {"DEFAULT": "https://google.com/search?q={}"}
 c.url.searchengines['a'] = 'https://wiki.archlinux.org/?search={}'
 c.url.searchengines['g'] = 'http://www.google.com/search?hl=en&source=hp&ie=ISO-8859-l&q={}'
@@ -105,18 +112,16 @@ c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
 c.url.searchengines['d'] = 'https://duckduckgo.com/?q={}&hps=1'
 
 
-
-
 # Spawn with URL
-config.bind('C','spawn --userscript container-open')
-config.bind('<Alt-c>','set-cmd-text -s :spawn --userscript container-open')
-config.bind('<Alt-f>','hint links userscript container-open')
-config.bind('<Alt-b>','spawn --userscript qute-bitwarden')
+config.bind('C', 'spawn --userscript container-open')
+config.bind('<Alt-c>', 'set-cmd-text -s :spawn --userscript container-open')
+config.bind('<Alt-f>', 'hint links userscript container-open')
+config.bind('<Alt-b>', 'spawn --userscript qute-bitwarden')
 config.bind('X', 'spawn --userscript add-nextcloud-bookmarks')
 config.bind(',dark', 'spawn --userscript dark-toogle')
 
 
-## alias
+# alias
 c.aliases = {
     'q': 'close',
     'qa': 'quit',
@@ -130,5 +135,3 @@ c.aliases['container-ls'] = 'spawn --userscript container-ls'
 c.aliases['container-add'] = 'spawn --userscript container-add'
 c.aliases['container-rm'] = 'spawn --userscript container-rm'
 c.aliases['nextcloud-bookmarks-import'] = 'spawn --userscript import-nextcloud-bookmarks'
-
-
