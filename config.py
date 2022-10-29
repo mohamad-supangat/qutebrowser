@@ -111,6 +111,7 @@ c.url.searchengines['red'] = 'https://libredd.it/r/popular/search?q={}&restrict_
 c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
 c.url.searchengines['d'] = 'https://duckduckgo.com/?q={}&hps=1'
 
+c.qt.environ = {"NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
 
 # Spawn with URL
 config.bind('C', 'spawn --userscript container-open')
