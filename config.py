@@ -110,8 +110,13 @@ c.url.searchengines['gh'] = 'https://github.com/search?q={}'
 c.url.searchengines['red'] = 'https://libredd.it/r/popular/search?q={}&restrict_sr=on'
 c.url.searchengines['aur'] = 'https://aur.archlinux.org/packages?O=0&K={}'
 c.url.searchengines['d'] = 'https://duckduckgo.com/?q={}&hps=1'
+c.url.searchengines['npm'] = 'https://www.npmjs.com/search?q={}'
+c.url.searchengines['npms'] = 'https://npms.io/search?q={}'
+c.url.searchengines['pa'] = 'https://packagist.org/?query={}'
 
-c.qt.environ = {"NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
+
+c.qt.environ = {
+    "NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
 
 # Spawn with URL
 config.bind('C', 'spawn --userscript container-open')
