@@ -48,7 +48,7 @@ c.content.blocking.adblock.lists = ['https://easylist.to/easylist/easylist.txt',
 
 # download manager
 c.downloads.position = 'bottom'
-c.downloads.location.remember = False
+c.downloads.location.remember = True
 c.downloads.location.suggestion = "both"
 c.downloads.remove_finished = 30000
 old_chrome_ua = 'Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko) {qt_key}/{qt_version} {upstream_browser_key}/67.0.1 Safari/{webkit_version}'
