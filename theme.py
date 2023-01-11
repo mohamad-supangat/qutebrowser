@@ -267,4 +267,4 @@ def tampilan(c):
     # ## Type: QtColor
     c.colors.tabs.selected.odd.fg = palette['background']
 
-    c.colors.webpage.bg = palette['background']
+    # c.colors.webpage.bg = palette['background']
