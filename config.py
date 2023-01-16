@@ -101,9 +101,9 @@ c.tabs.indicator.width = 10
 c.url.start_pages = str("~/.config/qutebrowser/startpage/index.html")
 
 # Dark Mode
-# c.colors.webpage.preferred_color_scheme = 'dark'
-# c.colors.webpage.darkmode.enabled = True
-# c.colors.webpage.darkmode.policy.images = 'never'
+c.colors.webpage.preferred_color_scheme = "dark"
+c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.policy.images = "never"
 
 
 c.fonts.default_family = "Iosevka"
@@ -114,7 +114,7 @@ c.url.searchengines = {
     "DEFAULT": "https://google.com/search?q={}",
     "a": "https://wiki.archlinux.org/?search={}",
     "g": "http://www.google.com/search?hl=en&source=hp&ie=ISO-8859-l&q={}",
-    "y": "https://www.youtube.com/results?search_query={}",
+    "y": "https://invidious.snopyta.org/search?q={}",
     "gh": "https://github.com/search?q={}",
     "gf": "https://greasyfork.org/en/scripts?filter_locale=0&q={}",
     "red": "https://libreddit.spike.codes/r/popular/search?q={}&restrict_sr=on",
