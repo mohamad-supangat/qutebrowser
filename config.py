@@ -17,7 +17,7 @@ c.auto_save.session = True
 c.session.lazy_restore = True
 c.completion.shrink = True
 c.completion.use_best_match = True
-c.content.notifications.presenter = "messages"
+c.content.notifications.presenter = "libnotify"
 c.content.fullscreen.window = True
 c.content.geolocation = False
 c.content.autoplay = False
@@ -102,7 +102,7 @@ c.url.start_pages = str("~/.config/qutebrowser/startpage/index.html")
 
 # Dark Mode
 c.colors.webpage.preferred_color_scheme = "dark"
-c.colors.webpage.darkmode.enabled = True
+# c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = "never"
 
 
