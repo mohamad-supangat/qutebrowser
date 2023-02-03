@@ -106,7 +106,7 @@ c.colors.webpage.preferred_color_scheme = "dark"
 c.colors.webpage.darkmode.policy.images = "never"
 
 
-c.fonts.default_family = "Iosevka"
+c.fonts.default_family = "Iosevka Mayukai Codepro"
 c.url.default_page = c.url.start_pages
 
 # Search Enginge
@@ -125,6 +125,8 @@ c.url.searchengines = {
     "pa": "https://packagist.org/?query={}",
     "fdroid": "https://search.f-droid.org/?q={}",
     "apkmirror": "https://www.apkmirror.com/?s={}",
+    "tliden": "https://translate.google.com/?sl=id&tl=en&text={}&op=translate",
+    "tlenid": "https://translate.google.com/?sl=en&tl=id&text={}&op=translate",
 }
 
 
