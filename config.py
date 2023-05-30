@@ -60,14 +60,15 @@ c.downloads.remove_finished = 30000
 #  ╰──────────────────────────────────────────────────────────╯
 desktop_ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
 
-mobile_ua = "Mozilla/5.0 (X11; CrOS aarch64 15183.59.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.5359.75 Safari/537.36"
+mobile_ua = "Mozilla/5.0 (Android 4.4; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0"
 # config.set('content.headers.user_agent', old_chrome_ua, 'steamdb.info')
 # config.set('content.headers.user_agent', old_chrome_ua, 'www.nginx.com')
 # config.set('content.headers.user_agent', old_chrome_ua, 'gitlab.com/users/sign_in')
 
-mobile_url = ["facebook.com", "x.facebook.com", "www.facebook.com", "m.facebook.com"]
-for url in mobile_url:
-    config.set("content.headers.user_agent", mobile_ua, url)
+mobile_url = ["facebook.com", "x.facebook.com",
+              "www.facebook.com", "m.facebook.com"]
+# for url in mobile_url:
+# config.set("content.headers.user_agent", mobile_ua, url)
 config.set("content.headers.user_agent", desktop_ua, "global")
 
 config.set("content.images", True, "chrome-devtools://*")
@@ -79,8 +80,10 @@ c.content.pdfjs = True
 
 
 c.editor.command = ["alacritty", "-e", "nvim", "{file}"]
-c.fileselect.single_file.command = ["alacritty", "-e", "ranger", "--choosefile={}"]
-c.fileselect.multiple_files.command = ["alacritty", "-e", "ranger", "--choosefiles={}"]
+c.fileselect.single_file.command = [
+    "alacritty", "-e", "ranger", "--choosefile={}"]
+c.fileselect.multiple_files.command = [
+    "alacritty", "-e", "ranger", "--choosefiles={}"]
 c.fileselect.folder.command = ["alacritty", "-e", "ranger", "--choosedir={}"]
 c.input.insert_mode.auto_load = False
 c.scrolling.smooth = True
@@ -88,7 +91,8 @@ c.scrolling.smooth = True
 
 c.statusbar.show = "always"
 c.statusbar.position = "bottom"
-c.statusbar.widgets = ["progress", "keypress", "url", "scroll", "history", "tabs"]
+c.statusbar.widgets = ["progress", "keypress",
+                       "url", "scroll", "history", "tabs"]
 c.tabs.favicons.show = "always"
 c.tabs.background = True
 c.tabs.last_close = "ignore"
@@ -130,15 +134,27 @@ c.url.searchengines = {
 }
 
 
-c.qt.environ = {"NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
+c.qt.environ = {
+    "NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
 
 # Spawn with URL
 config.bind("C", "spawn --userscript container-open")
 config.bind("<Alt-c>", "set-cmd-text -s :spawn --userscript container-open")
 config.bind("<Alt-f>", "hint links userscript container-open")
-config.bind("<Alt-b>", "spawn --userscript qute-bitwarden")
+# config.bind("<Alt-b>", "spawn --userscript qute-bitwarden")
+
+config.bind('<Alt-Shift-u>',
+            'spawn --userscript qute-keepassxc --key ABC1234', mode='insert')
+config.bind(
+    'pw', 'spawn --userscript qute-keepassxc --key ABC1234', mode='normal')
 config.bind("X", "spawn --userscript add-nextcloud-bookmarks")
 config.bind(",dark", "spawn --userscript dark-toogle")
+
+
+config.bind('<Alt-Shift-u>',
+            'spawn --userscript qute-keepassxc --key ABC1234', mode='insert')
+config.bind(
+    'pw', 'spawn --userscript qute-keepassxc --key ABC1234', mode='normal')
 
 
 # alias

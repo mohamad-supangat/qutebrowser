@@ -41,7 +41,7 @@ dark_aqua = "#689d6a"
 dark_gray = "#a89984"
 dark_orange = "#d65d0e"
 
-### Completion
+# Completion
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
@@ -89,7 +89,7 @@ c.colors.completion.scrollbar.fg = c.colors.completion.item.selected.fg
 # Color of the scrollbar in the completion view.
 c.colors.completion.scrollbar.bg = c.colors.completion.category.bg
 
-### Context menu
+# Context menu
 
 # Background color of disabled items in the context menu.
 c.colors.contextmenu.disabled.bg = bg3
@@ -101,15 +101,15 @@ c.colors.contextmenu.disabled.fg = fg3
 c.colors.contextmenu.menu.bg = bg0
 
 # Foreground color of the context menu. If set to null, the Qt default is used.
-c.colors.contextmenu.menu.fg =  fg2
+c.colors.contextmenu.menu.fg = fg2
 
 # Background color of the context menu’s selected item. If set to null, the Qt default is used.
 c.colors.contextmenu.selected.bg = bg2
 
-#Foreground color of the context menu’s selected item. If set to null, the Qt default is used.
+# Foreground color of the context menu’s selected item. If set to null, the Qt default is used.
 c.colors.contextmenu.selected.fg = c.colors.contextmenu.menu.fg
 
-### Downloads
+# Downloads
 
 # Background color for the download bar.
 c.colors.downloads.bar.bg = bg0
@@ -129,7 +129,7 @@ c.colors.downloads.stop.bg = bright_aqua
 # Foreground color for downloads with errors.
 c.colors.downloads.error.fg = bright_red
 
-### Hints
+# Hints
 
 # Font color for hints.
 c.colors.hints.fg = bg0
@@ -140,7 +140,7 @@ c.colors.hints.bg = 'rgba(250, 191, 47, 200)'  # bright_yellow
 # Font color for the matched part of hints.
 c.colors.hints.match.fg = bg4
 
-### Keyhint widget
+# Keyhint widget
 
 # Text color for the keyhint widget.
 c.colors.keyhint.fg = fg4
@@ -151,7 +151,7 @@ c.colors.keyhint.suffix.fg = fg0
 # Background color of the keyhint widget.
 c.colors.keyhint.bg = bg0
 
-### Messages
+# Messages
 
 # Foreground color of an error message.
 c.colors.messages.error.fg = bg0
@@ -180,7 +180,7 @@ c.colors.messages.info.bg = bg0
 # Border color of an info message.
 c.colors.messages.info.border = c.colors.messages.info.bg
 
-### Prompts
+# Prompts
 
 # Foreground color for prompts.
 c.colors.prompts.fg = fg2
@@ -194,7 +194,7 @@ c.colors.prompts.bg = bg3
 # Background color for the selected item in filename prompts.
 c.colors.prompts.selected.bg = bg2
 
-### Statusbar
+# Statusbar
 
 # Foreground color of the statusbar.
 c.colors.statusbar.normal.fg = fg2
@@ -267,7 +267,7 @@ c.colors.statusbar.url.success.https.fg = fg0
 # Foreground color of the URL in the statusbar when there's a warning.
 c.colors.statusbar.url.warn.fg = bright_purple
 
-### tabs
+# tabs
 
 # Background color of the tab bar.
 c.colors.tabs.bar.bg = bg0
