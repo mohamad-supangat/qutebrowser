@@ -152,9 +152,9 @@ config.bind(",dark", "spawn --userscript dark-toogle")
 
 
 config.bind('<Alt-Shift-u>',
-            'spawn --userscript qute-keepassxc --key ABC1234', mode='insert')
+            'spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59', mode='insert')
 config.bind(
-    'pw', 'spawn --userscript qute-keepassxc --key ABC1234', mode='normal')
+    'pw', 'spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59', mode='normal')
 
 
 # alias
