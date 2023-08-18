@@ -46,6 +46,7 @@ c.content.blocking.adblock.lists = [
     "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
     "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
     "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
+    "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt"
 ]
 
 # download manager
@@ -58,9 +59,10 @@ c.downloads.remove_finished = 30000
 #  ╭──────────────────────────────────────────────────────────╮
 #  │ Useragent for mobile view and desktop                    │
 #  ╰──────────────────────────────────────────────────────────╯
-desktop_ua = "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_1) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
+desktop_ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36 Edge/167D0DCEF5E2D"
 
-mobile_ua = "Mozilla/5.0 (Android 4.4; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0"
+# mobile_ua = "Mozilla/5.0 (Android 4.4; Mobile; rv:109.0) Gecko/109.0 Firefox/109.0"
+mobile_ua = "Mozilla/5.0 (Linux; Android 13; SM-S901B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36"
 # config.set('content.headers.user_agent', old_chrome_ua, 'steamdb.info')
 # config.set('content.headers.user_agent', old_chrome_ua, 'www.nginx.com')
 # config.set('content.headers.user_agent', old_chrome_ua, 'gitlab.com/users/sign_in')
@@ -172,5 +174,13 @@ c.aliases = {
     "nextcloud-bookmarks-import": "spawn --userscript import-nextcloud-bookmarks",
 }
 
+c.bindings.commands = {
+    "normal": {
+        "d": "scroll page-down",
+        "u": "scroll page-up",
+        "<Ctrl-D>": "tab-close",
+        "<Ctrl-U>": "undo"
+    }
+}
 
 config.source("gruvbox.py")
