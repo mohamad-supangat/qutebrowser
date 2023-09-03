@@ -104,7 +104,7 @@ c.tabs.favicons.scale = 0.8
 c.tabs.indicator.width = 10
 
 
-c.url.start_pages = str("~/.config/qutebrowser/startpage/index.html")
+c.url.start_pages = str("qute://start")
 
 # Dark Mode
 c.colors.webpage.preferred_color_scheme = "dark"
