@@ -112,7 +112,8 @@ c.colors.webpage.preferred_color_scheme = "dark"
 c.colors.webpage.darkmode.policy.images = "never"
 
 
-c.fonts.default_family = "Iosevka Mayukai Codepro"
+c.fonts.default_family = "Iosevka Nerd Font"
+c.fonts.default_size  = "8pt"
 c.url.default_page = c.url.start_pages
 
 # Search Enginge
