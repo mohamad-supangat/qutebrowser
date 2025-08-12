@@ -9,16 +9,16 @@
 
 bg0_hard = "#1d2021"
 bg0_soft = '#32302f'
-bg0_normal = '#282828'
+bg0_normal = '#2e3436'
 
 bg0 = bg0_normal
-bg1 = "#3c3836"
+bg1 = "#010101"
 bg2 = "#504945"
 bg3 = "#665c54"
 bg4 = "#7c6f64"
 
-fg0 = "#fbf1c7"
-fg1 = "#ebdbb2"
+fg0 = "#fafafa"
+fg1 = "#f6f6f6"
 fg2 = "#d5c4a1"
 fg3 = "#bdae93"
 fg4 = "#a89984"

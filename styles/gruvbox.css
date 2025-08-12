@@ -85,7 +85,7 @@ div[class*="content"], div[class*="container"],
 /* Popup divs that use visibility: hidden and display: none */
 div[style*="display: block"],
 div[style*="visibility: visible"] {
-    background-color: #282828 !important;
+    background-color: #2e3436 !important;
   }
 
   /*: No BG :*/
@@ -124,7 +124,7 @@ div[style*="visibility: visible"] {
 
   /* Highlight */
   ::-moz-selection {
-    background-color: #ebdbb2 !important;
+    background-color: #f6f6f6 !important;
     color: #32302f !important;
   }
 
@@ -132,7 +132,7 @@ div[style*="visibility: visible"] {
 
   a {
     color: #689d6a !important;
-    background-color: #282828 !important;
+    background-color: #2e3436 !important;
     opacity: 1 !important;
     text-indent: 0 !important;
   }
@@ -222,7 +222,7 @@ div[style*="visibility: visible"] {
   }
   th,
   caption {
-    background: #282828 !important;
+    background: #2e3436 !important;
   }
 
   /* ::: Inputs, textareas ::: */
@@ -233,7 +233,7 @@ div[style*="visibility: visible"] {
   select,
   option,
   optgroup {
-    color: #ebdbb2 !important;
+    color: #f6f6f6 !important;
     background: none #1d2021 !important;
     -moz-appearance: none !important;
     -webkit-appearance: none !important;
@@ -260,7 +260,7 @@ div[style*="visibility: visible"] {
   input[type="reset"]:hover,
   button:hover {
     color: #32302f !important;
-    background: #ebdbb2 !important;
+    background: #f6f6f6 !important;
   }
 
   input[type="image"] {
@@ -291,7 +291,7 @@ div[style*="visibility: visible"] {
 
 @-moz-document url(about:newtab) {
   window {
-    background: #282828 !important;
+    background: #2e3436 !important;
   }
 
   #newtab-scrollbox {
@@ -308,6 +308,6 @@ div[style*="visibility: visible"] {
 {
   /* Browser Background */
   browser[type="content-primary"] {
-    background-color: #282828 !important;
+    background-color: #2e3436 !important;
   }
 }

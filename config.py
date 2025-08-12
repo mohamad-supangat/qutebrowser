@@ -1,8 +1,6 @@
 # import dracula.draw
 # from theme import tampilan
 # tampilan(c)
-# Load existing settings made via :set
-config.load_autoconfig()
 
 # dracula.draw.blood(c, {
 #     'spacing': {
@@ -46,7 +44,7 @@ c.content.blocking.adblock.lists = [
     "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
     "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/unbreak.txt",
     "https://raw.githubusercontent.com/brave/adblock-lists/master/brave-lists/brave-social.txt",
-    "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt"
+    "https://raw.githubusercontent.com/reek/anti-adblock-killer/master/anti-adblock-killer-filters.txt",
 ]
 
 # download manager
@@ -67,8 +65,12 @@ mobile_ua = "Mozilla/5.0 (Linux; Android 13; SM-S901B) AppleWebKit/537.36 (KHTML
 # config.set('content.headers.user_agent', old_chrome_ua, 'www.nginx.com')
 # config.set('content.headers.user_agent', old_chrome_ua, 'gitlab.com/users/sign_in')
 
-mobile_url = ["facebook.com", "x.facebook.com",
-              "www.facebook.com", "m.facebook.com"]
+mobile_url = [
+    "facebook.com",
+    "x.facebook.com",
+    "www.facebook.com",
+    "m.facebook.com",
+]
 # for url in mobile_url:
 # config.set("content.headers.user_agent", mobile_ua, url)
 config.set("content.headers.user_agent", desktop_ua, "global")
@@ -83,9 +85,17 @@ c.content.pdfjs = True
 
 c.editor.command = ["alacritty", "-e", "nvim", "{file}"]
 c.fileselect.single_file.command = [
-    "alacritty", "-e", "ranger", "--choosefile={}"]
+    "alacritty",
+    "-e",
+    "ranger",
+    "--choosefile={}",
+]
 c.fileselect.multiple_files.command = [
-    "alacritty", "-e", "ranger", "--choosefiles={}"]
+    "alacritty",
+    "-e",
+    "ranger",
+    "--choosefiles={}",
+]
 c.fileselect.folder.command = ["alacritty", "-e", "ranger", "--choosedir={}"]
 c.input.insert_mode.auto_load = False
 c.scrolling.smooth = True
@@ -93,8 +103,14 @@ c.scrolling.smooth = True
 
 c.statusbar.show = "always"
 c.statusbar.position = "bottom"
-c.statusbar.widgets = ["progress", "keypress",
-                       "url", "scroll", "history", "tabs"]
+c.statusbar.widgets = [
+    "progress",
+    "keypress",
+    "url",
+    "scroll",
+    "history",
+    "tabs",
+]
 c.tabs.favicons.show = "always"
 c.tabs.background = True
 c.tabs.last_close = "ignore"
@@ -108,12 +124,12 @@ c.url.start_pages = str("qute://start")
 
 # Dark Mode
 c.colors.webpage.preferred_color_scheme = "dark"
-# c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.enabled = True
 c.colors.webpage.darkmode.policy.images = "never"
 
 
 c.fonts.default_family = "Iosevka Nerd Font"
-c.fonts.default_size  = "8pt"
+c.fonts.default_size = "8pt"
 c.url.default_page = c.url.start_pages
 
 # Search Enginge
@@ -137,8 +153,7 @@ c.url.searchengines = {
 }
 
 
-c.qt.environ = {
-    "NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
+c.qt.environ = {"NODE_PATH": "/home/deve/.local/share/pnpm/global/5/node_modules"}
 
 # Spawn with URL
 config.bind("C", "spawn --userscript container-open")
@@ -146,18 +161,26 @@ config.bind("<Alt-c>", "set-cmd-text -s :spawn --userscript container-open")
 config.bind("<Alt-f>", "hint links userscript container-open")
 # config.bind("<Alt-b>", "spawn --userscript qute-bitwarden")
 
-config.bind('<Alt-Shift-u>',
-            'spawn --userscript qute-keepassxc --key ABC1234', mode='insert')
 config.bind(
-    'pw', 'spawn --userscript qute-keepassxc --key ABC1234', mode='normal')
+    "<Alt-Shift-u>",
+    "spawn --userscript qute-keepassxc --key ABC1234",
+    mode="insert",
+)
+config.bind("pw", "spawn --userscript qute-keepassxc --key ABC1234", mode="normal")
 config.bind("X", "spawn --userscript add-nextcloud-bookmarks")
 config.bind(",dark", "spawn --userscript dark-toogle")
 
 
-config.bind('<Alt-Shift-u>',
-            'spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59', mode='insert')
 config.bind(
-    'pw', 'spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59', mode='normal')
+    "<Alt-Shift-u>",
+    "spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59",
+    mode="insert",
+)
+config.bind(
+    "pw",
+    "spawn --userscript qute-keepassxc --key 5AF6D616CE6A96E0071D5D94F8A9C4E5735C3E59",
+    mode="normal",
+)
 
 
 # alias
@@ -180,8 +203,10 @@ c.bindings.commands = {
         "d": "scroll page-down",
         "u": "scroll page-up",
         "<Ctrl-D>": "tab-close",
-        "<Ctrl-U>": "undo"
+        "<Ctrl-U>": "undo",
     }
 }
 
 config.source("gruvbox.py")
+
+config.load_autoconfig()
